@@ -1,9 +1,21 @@
+@import "./responsive.scss";
+
+
 .layout {
-    background-color: peachpuff;
     height: 100vh;
     max-width: 100vw;
     margin-left: auto;
     margin-right: auto;
     padding-left: 40px;
     padding-right: 40px;
+
+    @include lg {
+        background-color: hsl(197, 61%, 90%);
+    }
+    @include md {
+        background-color: hsl(0, 0%, 98%);
+    }
+    @include sm {
+        background-color: hsl(36, 67%, 86%);
+    }
 }
