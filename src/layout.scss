@@ -8,16 +8,17 @@
     margin-right: auto;
     // padding-left: 60px;
     // padding-right: 60px;
+    background-color: #FAFAFA;
 
     @include lg {
-        background-color: hsl(197, 61%, 90%);
+        // background-color: hsl(197, 61%, 90%);
     }
     @include md {
-        background-color: hsl(0, 0%, 98%);
+        // background-color: hsl(0, 0%, 98%);
     }
     @include sm {
-        background-color: hsl(36, 67%, 86%);
-        padding-left: 30px;
-        padding-right: 30px;
+        // background-color: hsl(36, 67%, 86%);
+        // padding-left: 30px;
+        // padding-right: 30px;
     }
 }
