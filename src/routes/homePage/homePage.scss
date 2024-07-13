@@ -1,6 +1,8 @@
 @import "../../responsive.scss";
 
 .homePage {
+    background-color: #AFE3F9;
+    border-radius: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,6 +11,9 @@
     @include sm {
         flex-direction: column;
         padding: 30px 0px;
+        background-color: transparent;
+        border-radius: 0px;
+
     }
 }
 

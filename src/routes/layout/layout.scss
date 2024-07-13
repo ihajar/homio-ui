@@ -1,4 +1,4 @@
-@import "./responsive.scss";
+@import "../../responsive.scss";
 
 
 .layout {
@@ -31,12 +31,10 @@
         }
     }
     .content {
-        background-color: #AFE3F9;
+        // background-color: #AFE3F9;
         height: calc(100vh - 100px);
         width: calc(100vw - 100px);
         margin: auto;
-        border-radius: 30px;
-        
         // padding-left: 60px;
         // padding-right: 60px;
         @include sm {

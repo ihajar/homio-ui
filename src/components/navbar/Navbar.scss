@@ -80,6 +80,7 @@ nav {
             @include sm {
                 display: inline;
                 z-index: 1200 !important;
+                // position: absolute;
             }
             img {
                 width: 40px;
