@@ -1,0 +1,102 @@
+@import "../../responsive.scss";
+
+
+.searchBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 100;  
+    height: auto;
+    position: relative;
+    .type {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        button {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            color: #292929;
+            font-size: 15px;
+            text-transform: capitalize;
+
+            &.active {
+                background-color: #fafafa;
+                border-top-left-radius: 20px;  
+                border-top-right-radius: 20px; 
+                color: #040415;
+                font-weight: 700;
+                @include sm {
+                background-color: #AFE3F9;
+                }
+            }
+        }
+    }
+
+    form {
+        background-color: rgba(236, 248, 254, 0.522);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        height: 80px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 10px 20px;
+        gap: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        // z-index: 0 !important;
+        z-index: 100;
+        position: relative;
+        @include sm {
+            background-color: #c6ebfb6e;
+            backdrop-filter: blur(100px);
+            justify-content: space-evenly;
+            flex-direction: column;
+            height: auto;
+            // z-index: 0 !important;
+
+        }
+        input {
+            border: none;
+            width: 100%;
+            background: none;
+            font-size: 18px;
+            padding: 10px 0px;
+            color: #525252;
+            // flex: 1;
+             &:focus {
+                outline: none;
+             }
+            
+            @include md {
+                font-size: 15px;
+                padding: 20px 0px;
+            }
+            @include sm {
+                font-size: 14px;
+                z-index: 0;
+            }
+        }
+
+        button {
+            background: #040415;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            width: 150px;
+            height: 50px;
+            border: none;
+            // flex: 0.4;
+            @include sm {
+                width: 100%;
+                // flex: none;
+            }
+        }
+    }
+}

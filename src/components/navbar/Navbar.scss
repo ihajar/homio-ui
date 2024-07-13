@@ -6,9 +6,9 @@ nav {
     height: 80px;
     align-items: center;
     background-color: #FAFAFA;
-    padding-left: 40px;
-    padding-right: 40px; 
     width: 100%;
+    position: relative;
+    // z-index: 1000 !important;
     a {
         transition: all 0.4s ease;
         @include sm {
@@ -58,14 +58,15 @@ nav {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        gap: 10px;
+        gap: 20px;
+
         @include md {
             flex: 2;
             gap: 0px;
         }
         a {
             padding: 12px 10px;
-            margin: 20px;
+            // margin: 20px;
         }
         .register {
             // background-color: #f1b868;
@@ -74,10 +75,11 @@ nav {
         }
         .menuIcon {
             display: none;
-            z-index: 999;
+            z-index: 1200 !important;
 
             @include sm {
-                display: initial;
+                display: inline;
+                z-index: 1200 !important;
             }
             img {
                 width: 40px;
@@ -86,12 +88,12 @@ nav {
             }
         }
         .menu {
-            position: absolute;
+            position: fixed;
             top: 0;
             right: -50%;
             background-color: #040415;
             color: #FAFAFA;
-            height: 100vh;
+            height:100vh !important;
             width: 50%;
             transition: all 1s ease;
             display: flex;
@@ -99,12 +101,17 @@ nav {
             align-items: center;
             justify-content: center;
             font-size: 20px;
-
+            z-index: 1200 !important;
+            
             &.active {
                 right: 0;
+                // overflow-y: auto;
+                // z-index: 1200 !important;
+                // height: 100% !important;
             }
 
             @include sm {
+                z-index: 999 !important;
                 a {
                     display: initial;
                 }
