@@ -1,0 +1,109 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    gap: 20px;
+    background-color: white;
+    border-radius: 20px;
+    max-height: 250px;
+    padding: 20px;
+    text-align: center;
+    .imageContainer {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        width: 200px;
+        align-content: center;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+    }
+    .textContainer {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        height: 100%;
+        .detailsContainer {
+            flex: 3;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 30px;
+
+            .left {
+                display: flex;
+                flex-direction: column ;
+                text-align: left;
+                gap: 10px;
+                .title {
+                    font-size: 17px;
+                    text-align: left;
+                    font-weight: 600;
+                    transition: all 0.4s ease;
+                    &:hover {
+                        scale: 1.01;
+                    }
+                }
+                .address {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                }
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+
+                .price {
+                    span {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #0B6E98;
+                    }
+                }
+                .feature {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+                .divider {
+                    border: 0;
+                    height: 1px;
+                    background-color: #666666;
+                    margin: 10px 0;
+                    width: 100px;
+                }
+            }
+        }
+        .divider {
+            width: 500px;
+        }
+        .btnContainers {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: flex-end;
+            justify-content: flex-end;
+            button {
+                border: none;
+                background: none;
+                outline: none;
+                cursor: pointer;
+                
+            }
+        }
+    }
+}
