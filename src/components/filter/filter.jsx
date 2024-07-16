@@ -42,7 +42,21 @@ function Filter() {
         </div>
         <div className="item">
           <label htmlFor="priceRange">Price Range $</label>
-          <input
+          <div className="range">
+            <input
+              type="number"
+              id="minPrice"
+              name="minPrice"
+              placeholder="$ From"
+            />
+            <input
+              type="number"
+              id="maxPrice"
+              name="maxPrice"
+              placeholder="$ 1000000"
+            />
+          </div>
+          {/* <input
             className="priceRange"
             type="range"
             name="priceRange"
@@ -51,17 +65,18 @@ function Filter() {
             max={1000000}
             step={1000}
             placeholder="Price Range"
-          />
+          /> */}
         </div>
         <div className="item">
-          <IoBedOutline  style={{ fontSize: "35px", color: "#040415", paddingBottom: "10px" }} />
+          <IoBedOutline  style={{ fontSize: "28px", color: "#040415", paddingBottom: "10px" }} />
           <input
+            className="bedInput"
             type="number"
             name="bedroom"
             id="bedroom"
             min={0}
             max={10}
-            placeholder="Any"
+            placeholder="1"
           />
         </div>
         
