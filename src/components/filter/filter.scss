@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .filter{
     display: flex;
     flex-direction: column;
@@ -37,6 +39,14 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @include md {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-between;
+            gap: 20px;
+        }
         .item {
             display: flex;
             flex-direction: column;
@@ -45,6 +55,10 @@
                 outline: none !important;
                 border: none !important;
                 width: 150px;
+
+                @include md {
+                    width: 100%;
+                }
             }
             input[type="number"] {
                 border-radius: 30px;
@@ -55,11 +69,18 @@
             font-size: 15px;
             padding: 0px 20px;
             padding-bottom: 10px;
+            @include md {
+                padding: 10px 0px;
+            }
         }
         input{
             width: 100px;
             padding: 10px;
             color: #040415;
+
+            // @include md {
+            //     padding: 0px;
+            // }
         }
         select {
             background-color: white;
@@ -72,6 +93,10 @@
             align-items: center;
             display: block;
             color: #666666;
+            @include md {
+                padding: 10px 10px;
+                padding-right: 40px;
+            }
         }
     }
 
@@ -85,5 +110,9 @@
         border-radius: 20px;
         font-weight: 600;
         font-size: medium;
+
+        @include md {
+            width: 100%;
+        }
     }
 }

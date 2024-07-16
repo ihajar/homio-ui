@@ -48,7 +48,7 @@ function Card({ item }) {
             </div>
           </div>
         </div>
-       
+        
         <div className="btnContainers">
           <button
             onMouseEnter={() => setIsHeartHovered(true)}

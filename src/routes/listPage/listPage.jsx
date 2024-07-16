@@ -3,7 +3,7 @@ import "./listPage.scss";
 import Filter from "../../components/filter/filter"
 import Card from "../../components/card/card"
 import Map from "../../components/map/map";
- 
+  
 
 function ListPage() {
   const data = listData;

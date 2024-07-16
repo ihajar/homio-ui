@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .card {
     display: flex;
     flex-direction: row;
@@ -11,6 +13,22 @@
     max-height: 250px;
     padding: 20px;
     text-align: center;
+
+    @include lg {
+        max-height: fit-content;
+
+    }
+    @include md {
+        max-height: fit-content;
+    }
+
+    @include sm {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-height: fit-content;
+        text-align: left;
+    }
     .imageContainer {
         display: block;
         align-items: center;
@@ -19,6 +37,10 @@
         width: 200px;
         align-content: center;
         justify-content: center;
+
+        @include sm {
+            width: 100%;
+        }
         
         img {
             width: 100%;
@@ -35,6 +57,13 @@
         justify-content: space-between;
         gap: 20px;
         height: 100%;
+
+        @include sm {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            width: 100%;
+        }
         .detailsContainer {
             flex: 3;
             display: flex;
@@ -42,7 +71,16 @@
             align-items: flex-start;
             justify-content: space-between;
             gap: 30px;
-
+            @include md {
+                width: 100%;
+                justify-content: space-between;
+            }
+            @include sm {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                width: 100%;
+            }
             .left {
                 display: flex;
                 flex-direction: column ;
@@ -56,16 +94,30 @@
                     &:hover {
                         scale: 1.01;
                     }
+                    @include sm {
+                    font-size: 15px;
+                    }
                 }
                 .address {
                     display: flex;
                     flex-direction: row;
                     gap: 10px;
+                    @include sm {
+                        font-size: 14px;
+                    }
                 }
             }
             .right {
                 display: flex;
                 flex-direction: column;
+                @include sm {
+                    flex-direction: row;
+                    gap: 20px;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                }
+
 
                 .price {
                     span {
@@ -74,24 +126,47 @@
                         color: #0B6E98;
                     }
                 }
-                .feature {
+                .features {
                     display: flex;
-                    flex-direction: row;
-                    gap: 10px;
-                    align-items: center;
-                    justify-content: flex-start;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 10px 0px;
+
+                    @include sm {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        justify-content: space-between;
+                        
+                    }
+                    .feature {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        align-items: center;
+                        justify-content: flex-start;
+                        @include sm {
+                            width: 100%;
+                            
+                        }
+                    }
+                    .divider {
+                        border: 0;
+                        height: 1px;
+                        background-color: #666666;
+                        margin: 10px 0;
+                        width: 100px;
+                        @include sm {
+                            display: none;
+                        }
+                    }
                 }
-                .divider {
-                    border: 0;
-                    height: 1px;
-                    background-color: #666666;
-                    margin: 10px 0;
-                    width: 100px;
-                }
+               
             }
         }
         .divider {
             width: 500px;
+            
         }
         .btnContainers {
             display: flex;

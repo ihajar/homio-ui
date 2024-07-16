@@ -6,7 +6,7 @@ import { IoBedOutline } from "react-icons/io5";
 function Filter() {
   // const [textValue, setTextValue] = useState("");
   // const [numValue, setNumValue] = useState(0);
-
+ 
   return (
     <div className="filter">
       <h1>Filter Properties</h1>
