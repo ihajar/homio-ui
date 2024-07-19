@@ -1,0 +1,254 @@
+@import "../../responsive.scss";
+
+.singlePage {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
+
+    @include md {
+        flex-direction: column;
+        height: auto;
+    }
+    // @include sm {
+    //     overflow-y: hidden;
+    //     height: 100%;
+    // }
+
+    .imageContainer {
+        flex: 2;
+        // background-color: yellow;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        // overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        @include md {
+            order: 0;
+            margin-top: 20px;
+            // position: static;
+            // height: auto;
+        }
+        // .slide {
+          
+        //     width: 100%;
+        //     height: 100%;
+        // }
+    }
+
+    .detailsContainer {
+        flex: 3;
+        overflow-y: scroll;
+        height: 100%;
+        padding-bottom: 30px;
+        margin-right: 20px;
+        &::-webkit-scrollbar {
+            width: 8px;        
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #D9F2FC;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #AFE3F9;
+            
+        }
+
+        @include md {
+            height: auto;
+            order: 1;
+            overflow-y: auto;
+            margin-right: 0px;
+
+        }
+
+        @include sm {
+            overflow-y: hidden;
+            height: 100%;
+            margin-right: 0px;
+        }
+
+        .wrapper {
+            padding-right: 20px;
+            padding-top: 30px;
+            height: 100%;
+            justify-content: space-between;
+
+            @include md {
+                padding: 20px 20px;
+                height: 100%;
+            }
+            // @include sm {
+            //     height: 100%;
+            // }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                // height: 100%;
+
+                .top {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: space-between;
+
+                    @include sm {
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+
+                    .post {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        @include sm {
+                            gap: 10px;
+                        }
+
+                        h1 {
+                            font-weight: 600;
+
+                            @include sm {
+                                font-size: 25px;
+                            }
+                        }
+
+                        .address {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 10px;
+                            span {
+                                color: #3D3D3D;
+                            }
+                        }
+                    }
+                    .price {
+                        span {
+                            font-size: 30px;
+                            font-weight: 500;
+                            color: #0B6E98 !important;
+                        }
+                        @include sm {
+                            font-size: 20px;
+                        }
+                    }
+                    
+                }
+                .chat {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .user {
+                        padding-top: 30px;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        align-items: center;
+                        justify-content: left;
+                        @include sm {
+                            gap: 15px;
+                        }
+    
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            object-fit: cover;
+                            border-radius: 50px;
+                        }
+                    }
+                    button {
+                        background-color: #EC9A29;
+                        padding: 20px;
+                        border-radius: 20px;
+                        outline: none;
+                        border: none;
+                        font-size: 18px;
+                        font-weight: 600;
+                        cursor: pointer;
+                         &:hover {
+                            background-color: #040415;
+                            color: #fafafa;
+                         }
+                    }
+                }
+
+               
+
+                .bottom {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-top: 30px;
+                    height: 100%;
+                    // height: max-content;
+                    .features {
+                        display: flex;
+                        flex-direction: column;
+                        // width: 100%;
+                        gap: 20px;
+                        // justify-content: space-between;
+
+                        @include sm {
+                            width: 100%;
+                            flex-direction: column;
+                        }
+                        .room {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 30px;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            @include sm {
+                                gap: 10px;
+                            }
+                        }
+
+                        .feature {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 10px;
+                            
+                            span {
+                                color: #3D3D3D;
+                                @include sm {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                    p {
+                        font-size: 18px;
+                        text-align: justify;
+                        // padding-right: 20px;
+                        line-height: 25px;
+
+                        @include sm {
+                            font-size: 15px;
+                            padding-right: 0px;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
