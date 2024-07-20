@@ -68,6 +68,67 @@ nav {
             padding: 12px 10px;
             // margin: 20px;
         }
+        .user {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-weight: bold;
+            gap: 30px;
+            .userInfo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                    object-fit: cover;
+                    @include sm {
+                        margin-right: 20px;
+                    }
+                }
+            }
+            span {
+                @include sm {
+                    display: none;
+                }
+            }
+           button {
+            background-color: #EC9A29;
+            padding: 10px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+            cursor: pointer;
+            @include sm {
+                display: none;
+            }
+             &:hover {
+                background-color: #040415;
+                color: #fafafa;
+             }
+             .notification {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                background-color: red;
+                color: white;
+                border-radius: 50%;
+                width: 26px;
+                height: 26px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                font-weight: 300;
+                font-size: 15px;
+             }
+           }
+        }
         .register {
             // background-color: #f1b868;
             border: #040415 2px solid;
@@ -117,6 +178,36 @@ nav {
                     display: initial;
                 }
             }
+            button {
+                background-color: transparent;
+                color: #fafafa;
+                padding: 10px;
+                border-radius: 20px;
+                outline: none;
+                border: 2px solid #fafafa;
+                font-size: 20px;
+                font-weight: 400;
+                position: relative;
+                cursor: pointer;
+                margin-top: 20px;
+                
+                 .notification {
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                    background-color: red;
+                    color: white;
+                    border-radius: 50%;
+                    width: 26px;
+                    height: 26px;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 300;
+                    font-size: 15px;
+                 }
+               }
             
         }
     }
