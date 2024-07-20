@@ -9,13 +9,14 @@
 
     @include md {
         height: 100%;
-        width: auto;
+        // width: 100vw;
     }
-
-
+    
     .mainImage {
         flex: 3;
-
+        @include sm {
+            flex: 2;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -28,12 +29,15 @@
         flex: 1.5;
         display: flex;
         flex-direction: row;
-        width: auto;
-        height: auto;
+        // width: 100%;
+        // height: 100%;
         gap: 20px;
 
-        @include md {
+        @include sm {
+            flex: 1;
             gap: 10px;
+            width: 100%;
+            height: 100%;
         }
         img {
             width: 100px;
@@ -45,6 +49,10 @@
             cursor: pointer;
             object-fit: cover;
 
+            @include sm {
+                width: 80px;
+                height: 80px;
+            }
             &:active {
                 opacity: 1;
                 border: 2px solid #EC9A29;
