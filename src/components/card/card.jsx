@@ -6,9 +6,9 @@ import { LuBath } from "react-icons/lu";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { AiOutlineMessage, AiFillMessage } from "react-icons/ai";
 import { useState } from "react";
+ 
 
-
-
+ 
 function Card({ item }) {
 
   const [isHeartHovered, setIsHeartHovered] = useState(false)
@@ -42,7 +42,7 @@ function Card({ item }) {
               <hr className="divider" />
               <div className="feature">
                 <LuBath style={{ color: "#040415", fontSize: "18px" }} />
-                <p>{item.bedroom}</p>
+                <p>{item.bathroom}</p>
               </div>
               
             </div>

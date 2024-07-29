@@ -1,0 +1,17 @@
+@import "../../responsive.scss";
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+
+  @include md {
+    justify-content: center;
+  }
+  @include sm {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
