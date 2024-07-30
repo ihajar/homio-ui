@@ -4,7 +4,7 @@ import { IoCreateOutline } from "react-icons/io5";
 import List from "../../components/list/list";
 import Chat from "../../components/chat/chat";
  
- 
+  
 function ProfilePage() {
   return (
     <div className='profilePage'>

@@ -5,8 +5,27 @@
     flex-direction: row;
     height: 100%;
 
-    @include sm {
+    @include md {
         flex-direction: column;
+        // overflow: scroll;
+        &::-webkit-scrollbar {
+            width: 8px;        
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #D9F2FC;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #AFE3F9;
+            
+        }
     }
     .details {
         flex: 3;
@@ -30,18 +49,25 @@
             background: #AFE3F9;
             
         }
-        @include sm {
-            overflow-y: auto;
+        @include md {
+            flex: none;
+            height: max-content;
+            overflow: auto;
         }
+        // @include sm {
+        //     overflow-y: auto;
+        // }
 
         .wrapper {
             padding-right: 50px;
-            padding-top: 50px;
+            padding-top: 20px;
             margin-bottom: 30px;
             display: flex;
             flex-direction: column;
             gap: 50px;
-
+            @include md {
+                padding-right: 0px;
+            }
             .title {
                 display: flex;
                 align-items: center;
@@ -91,9 +117,15 @@
     .chatContainer {
         flex: 2;
         height: 100%;
+        @include md {
+            flex: none;
+            height: max-content;
+            overflow: auto;
+        }
 
         .wrapper {
             padding: 0px 20px;
+            height: 100%;
         }
     }
 }
