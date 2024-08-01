@@ -10,16 +10,15 @@
     // padding-right: 60px;
     background-color: #FAFAFA;
 
+
     @include lg {
-        // background-color: hsl(197, 61%, 90%);
+        
     }
     @include md {
-        // background-color: hsl(0, 0%, 98%);
+
     }
     @include sm {
-        // background-color: hsl(36, 67%, 86%);
-        // padding-left: 30px;
-        // padding-right: 30px;
+ 
     }
 
     .navbar {
@@ -35,8 +34,10 @@
         height: calc(100vh - 100px);
         width: calc(100vw - 100px);
         margin: auto;
+        margin-bottom: 50px;
         // padding-left: 60px;
         // padding-right: 60px;
+
         @include sm {
             padding-left: 40px;
             padding-right: 40px; 
@@ -46,5 +47,13 @@
             border-radius: 0px;
             
         }
+    }
+    .footer {
+
+        padding: 20px 0px;
+        height: fit-content;
+        position: absolute;
+        width: 100%;
+      
     }
 }

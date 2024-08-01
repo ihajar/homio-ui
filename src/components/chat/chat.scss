@@ -118,13 +118,13 @@
             }
             .chatMessage {
                 width: 50%;
+                margin: 0 10px;
                 
                 p {
                     background-color: #D9F2FC;
                     border-radius: 10px 10px 10px 0;
                     padding: 10px;
                 }                
-                padding: 10px;
                 &.own {
                     align-self: flex-end;
                     text-align: right;
@@ -154,10 +154,7 @@
                 overflow: hidden;
                 border: none;
                 padding: 20px;
-                font-size: 16px;
-                &active {
-                    border: none;
-                }
+                font-size: 15px;
             }
 
             button {

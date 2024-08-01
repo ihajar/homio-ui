@@ -79,7 +79,7 @@ function Chat() {
           </div>
         </div>
         <div className="bottom">
-          <textarea></textarea>
+          <textarea placeholder="type a message"></textarea>
           <button>Send</button>
         </div>
       </div>)}
